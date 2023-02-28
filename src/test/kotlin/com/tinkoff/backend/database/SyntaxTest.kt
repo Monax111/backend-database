@@ -18,7 +18,7 @@ class SyntaxTest : KLogging() {
                 Id int,
                 Name varchar(255),
                 Birth int,
-                Сountry varchar(255)
+                Country varchar(255)
             );
         """.trimIndent()
         ).execute()
