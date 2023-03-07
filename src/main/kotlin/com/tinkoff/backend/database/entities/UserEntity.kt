@@ -12,6 +12,8 @@ data class UserEntity(
     var id: Int? = 0,
     var email: String? = null,
     val name: String? = null,
+    val sex : String? = null,
     val age: Int? = null,
     val address: String? = null
 )
+

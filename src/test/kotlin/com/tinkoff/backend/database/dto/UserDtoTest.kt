@@ -90,13 +90,6 @@ class UserDtoTest {
 }
 
 
-fun generateUserDto(id: Int) = UserDto(
-    id = id,
-    name = LocalDateTime.now().toString(),
-    age = Random.nextInt(0, 100),
-    email = LocalDateTime.now().toString(),
-    address = (0..3).joinToString { LocalDateTime.now().toString() }
-)
 
 fun <T> logMeasureTime(name: String, block: () -> T): T {
     var result: T

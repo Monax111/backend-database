@@ -40,7 +40,7 @@ dependencies {
 
 
     implementation("org.springframework.boot:spring-boot-starter-web")
-//    implementation("org.springdoc:springdoc-openapi-ui:1.5.10")
+    implementation("org.springdoc:springdoc-openapi-ui:1.5.10")
 
     implementation("com.h2database:h2")
     implementation("org.testcontainers:testcontainers:1.16.0")
