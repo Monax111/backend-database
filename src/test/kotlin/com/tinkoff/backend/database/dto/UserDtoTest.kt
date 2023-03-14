@@ -1,5 +1,6 @@
 package com.tinkoff.backend.database.dto
 
+import com.tinkoff.backend.database.generator.UserGenerator
 import com.tinkoff.backend.database.repositories.UserEntityRepository
 import java.io.File
 import java.time.LocalDateTime
@@ -29,10 +30,11 @@ class UserDtoTest {
     @Autowired
     lateinit var userEntityRepository: UserEntityRepository
 
+    val generator = UserGenerator()
     @Test
     fun perf() {
         val data = List(1_000) {
-            generateUserDto(it)
+            generator.generateUserDto(it)
         }
         val newList = mutableListOf<UserDto>()
         logMeasureTime("Saved to memory") {
