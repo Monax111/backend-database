@@ -65,6 +65,16 @@ class SyntaxTest : KLogging() {
         """.trimIndent()
         ).executeQuery()
 
+
+            // Ищем данные
+//            val result = connection . prepareStatement ("""
+//            SELECT Author.name, AVG(Book.Price) as price FROM Book
+//            JOIN Author ON Book.AuthorId = Author.Id
+//            GROUP BY Author.name
+//            HAVING price > 500 AND Author.name <> 'Тестовый'
+//        """.trimIndent()
+//            ).executeQuery()
+
         val resultMap = mutableMapOf<String, Any>()
         while (result.next()) {
             repeat(result.metaData.columnCount) {
